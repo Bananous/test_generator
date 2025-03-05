@@ -1,18 +1,48 @@
-Generate a 30-question exam with HTML and CSS questions in Vietnamese with one example:
+Tạo một đề trắc nghiệm 30 câu hỏi tình huống về đạo đức, pháp luật và văn hóa trong môi trường số dành cho học sinh cấp 3 Việt Nam có sử dụng các câu hỏi mẫu dưới đây làm ví dụ và các câu hỏi tuân theo yêu cầu bên dưới :
 
-1. Định dạng CSS nào sau đây được sử dụng để đặt màu nền của phần tử <p> là màu xám?
-*a) p {background-color: gray;}
-b) p {bg-color: gray;}
-c) p {color: gray;}
-d) p {background: gray;}
+Cách tạo tình huống:
+ 1) Viết nhiều tình huống như viết các truyện ngắn tối đa 4 câu và tối thiểu 3 câu với mỗi câu hỏi. Mỗi câu hỏi sử dụng ít nhất 40 tokens.
+ 2) Lồng kiến thức bên dưới vào câu hỏi
+ 3) Đảm bảo câu hỏi có nét riêng so với những câu hỏi trước về mặt cấu trúc và nội dung
+ 4) Kiểm tra xem câu hỏi có phù hợp với điều kiện trong bước 1,2 và 3 không. Nếu không, lặp lại bước 1, 2 và 3
 
-Note: the answer has the star is the correct answer.
+ Tình huống và tình tiết phải liên quan tới:
+    - Pháp luật trong môi trường số
+    - Quyền tác giả, luật sở hữu trí tuệ
+    - Tác hại khi chia sẻ thông tin qua Internet
+    - Một số điều luật về Sở hữu trí tuệ, Quy định xử phạt vi phạm hành chính về quyền tác giả, quyền liên quan, ...
+    - Phòng tránh lừa đảo và ứng xử văn hóa qua mạng
+    - Văn hóa ứng xử
+    - Thế giới ảo, cuộc sống thực
+    - 17/6/2021: Bộ Quy tắc ứng xử trên mạng xã hội (Bộ TT&TT)
+    - Giữ gìn tính nhân văn trong thế giới ảo
+    - Ưu, nhược điểm của giao tiếp qua không gian mạng
+    - Tính nhân văn trên không gian mạng
+
+
+ Câu hỏi mẫu:
+
+1. Trên mạng xã hội, bạn thấy một bài đăng quảng cáo bán hàng hiệu với mức giá thấp hơn thị trường rất nhiều. Người bán yêu cầu chuyển khoản trước để giữ đơn hàng và cam kết giao hàng trong vòng 24 giờ. Khi bạn yêu cầu gặp trực tiếp hoặc thanh toán khi nhận hàng, người bán liên tục từ chối và thúc giục bạn đặt cọc nhanh vì số lượng sản phẩm có hạn. Đây là dấu hiệu của hình thức lừa đảo nào, và bạn nên làm gì để tránh bị mất tiền?
+*a) Đây có thể là lừa đảo chiếm đoạt tiền đặt cọc, bạn nên yêu cầu bằng chứng xác thực từ người bán và kiểm tra phản hồi của những người mua khác.
+b) Vì giá quá rẻ, bạn nên chấp nhận rủi ro và chuyển khoản đặt cọc để không bỏ lỡ cơ hội.
+c) Nhắn tin hỏi thêm thông tin sản phẩm nhưng cứ đặt cọc một khoản nhỏ để thử vận may.
+d) Chuyển khoản ngay và chờ nhận hàng, nếu không nhận được hàng thì tìm cách báo cáo sau.
+
+2. Bạn A đọc được một bài viết về bạn B trong lớp. Bạn A rất thích thú với nội dung này. Bạn A đã kiểm tra tính chính xác của thông tin, đảm bảo thông tin không có sai. Sau đó chia sẻ bài viết với mọi người để giúp bạn B được nhiều người biết tới. Trong tình huống trên, tình nhân văn thể hiện ở biểu hiện nào sau đây?
+a) Bạn A đã chia sẻ cảm xúc tích cực của bản thân.
+b) Bạn A đã kiểm chứng đảm bảo thông tin đúng sự thật trước khi đăng tải.
+c) Bạn A chia sẻ bài viết giúp bạn B được nhiều người biết đến hơn.
+*d) Bạn A đã kiểm chứng các thông tin, đảm bảo thông tin không bị cấm trước khi đăng tải.
+
+Lựa chọn có dấu * phía trước là lựa chọn đúng
+
 
 Requirements:
 - No other text but question content should be included
-- Questions about CSS properties, HTML tags, layout
+- Options should not give away the answers too easily either by the options' lengths or the options' content
+- Options should be similar to each other in terms of lengths and content but there must always be only one truest option
 - Correct answers should be randomly distributed
-- Each answer (option) must be different from each other.
+- Each questions must have different structures which can range from what's the best course of action, who is right, which course of action is more ethical, ...
 - Must generate text exactly from below format, not markdown or HTML:
 
 Each question's format (for example Option 2 is the correct answer):
@@ -23,6 +53,5 @@ c) [Option 3]
 d) [Option 4]
 
 - Add a asterisk symbol before correct answer.
-- Every code block (HTML tag, CSS code) must be put in backticks.
 - No indentation in the question format.
 - Each question must be separated by a blank line.
